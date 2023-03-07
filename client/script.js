@@ -83,7 +83,8 @@ const handleSubmit = async (e) => {
   // messageDiv.innerHTML = "..."
   loader(messageDiv);
 
-  const response = await fetch("https://codebot-35z7.onrender.com", {
+  const response = await fetch("https://codebot-35z7.onrender.com/", {
+    //https://codebot-35z7.onrender.com/
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -111,7 +112,7 @@ const handleSubmit = async (e) => {
 
 form.addEventListener("submit", handleSubmit);
 form.addEventListener("keyup", (e) => {
-  if (e.KeyboardEvent.keyCode === 13) {
+  if (e.keyCode === 13) {
     handleSubmit(e);
   }
 });
