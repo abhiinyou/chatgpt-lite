@@ -4,11 +4,10 @@ import cors from "cors";
 import { Configuration, OpenAIApi } from "openai";
 
 dotenv.config();
-console.log("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")
-//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
-
+console.log(process.env.OPENAI_API_KEY)
+//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
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 const openai = new OpenAIApi(configuration);
