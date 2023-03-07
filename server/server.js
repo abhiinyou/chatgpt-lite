@@ -8,7 +8,7 @@ console.log("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")
 //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
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 const openai = new OpenAIApi(configuration);
